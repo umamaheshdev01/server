@@ -17,7 +17,7 @@ export const POST = async(req,res)=>{
 
     const myemail = data1.data.email_addresses[0].email_address
     const namam = data1.data.username
-    const img = data1.data.profile_img_url
+    const img = data1.data.image_url
 
     const {data,error} = await supabase.from('Users').insert({email : myemail,username : namam,pic:img})
 
